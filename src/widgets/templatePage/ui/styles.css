@@ -1,0 +1,60 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    overflow-y: auto;
+    padding-bottom: 150px;
+}
+
+.page-liner {
+    height: 3px;
+    background-color: gray;
+    align-self: center;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    opacity: 0.3;
+}
+
+.page-content {
+    align-self: center;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    column-gap: 40px;
+}
+
+@media (max-width: 2100px) {
+    .page-content {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        column-gap: 60px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1500px) {
+    .page-content {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
