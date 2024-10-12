@@ -9,15 +9,22 @@ import { type Comic } from "~/entities/comic";
 export interface TemplatePageProps extends Omit<SeacrhProps, 'count'> {
     data: Comic[] | Character[]
 }
+
+const isComic = (item: Character | Comic): item is Comic => (item as Comic).comicId !== undefined;
+
+const getKey = (item: Character | Comic) => {
+    return isComic(item) ? item.comicId + item.title : item.characterId + item.name
+}
+
 export const TemplatePage: React.FC<TemplatePageProps> = (props) => {
     const { placeholder, label, data } = props;
     return (
         <div className="page-wrapper">
             <Search placeholder={placeholder} label={label} count={data.length} />
             <div className="page-liner" />
-            <div className="page-content">
+            <div className="page-grid">
                 {
-                    data.map(item => <Card item={item} />)
+                    data.map(item => <Card key={getKey(item)} item={item} />)
                 }
             </div>
         </div>

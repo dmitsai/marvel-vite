@@ -1,0 +1,1 @@
+export { TemplateDetailedPage } from './ui/templateDetailedPage';

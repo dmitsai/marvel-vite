@@ -11,8 +11,8 @@ export const Header: React.FC = () => {
         <header className="header-wrapper">
             <img src={marvelLogo} className="header-logo" alt="Marvel logo" />
             <div className="header-navbar">
-                <NavLink to={Routes.CHARACTERS} >{'Characters'}</NavLink>
-                <NavLink to={Routes.COMICS}>{'Comics'}</NavLink>
+                <NavLink to={Routes.CHARACTERS.ALL} >{'Characters'}</NavLink>
+                <NavLink to={Routes.COMICS.ALL}>{'Comics'}</NavLink>
             </div>
         </header>
     );
