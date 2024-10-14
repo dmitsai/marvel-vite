@@ -1,0 +1,35 @@
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search-placeholder-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: start;
+    gap: 10px
+}
+
+.search-placeholder {
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+}
+
+.search-count {
+    font-size: 20px;
+    font-weight: 800;
+    color: gray;
+}
+
+.seacrh-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
